@@ -1,0 +1,10 @@
+# Firebase App Hosting configuration for static site
+runConfig:
+  runCommand: "python3 -m http.server 8080"
+  
+env:
+  - variable: PORT
+    value: "8080"
+    availability:
+      - BUILD
+      - RUNTIME
