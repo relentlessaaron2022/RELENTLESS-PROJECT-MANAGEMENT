@@ -11,6 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
+      - name: Extract app files
+        run: |
+          unzip stitch_dashboard_creator_s_command_center.zip -d .
+          rm stitch_dashboard_creator_s_command_center.zip
+      
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
